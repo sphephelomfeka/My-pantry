@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/beige">
+    <include layout="@layout/view_topbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LETS GET COOKING"
+                android:textColor="@color/olive"
+                android:textSize="29sp"
+                android:fontFamily="serif"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A calmer kitchen starts with using what is already in your pantry."
+                android:textColor="@color/muted"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="92dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_card"
+                    android:layout_marginEnd="8dp">
+                    <TextView
+                        android:id="@+id/itemCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/olive"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pantry items"
+                        android:textColor="@color/muted"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="92dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_card"
+                    android:layout_marginStart="8dp">
+                    <TextView
+                        android:id="@+id/recipeCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/olive"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recipes ready"
+                        android:textColor="@color/muted"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YOUR INGREDIENTS"
+                android:textColor="@color/olive"
+                android:textSize="22sp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_marginTop="26dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Keep track of what you have. Recipes only appear when every required ingredient is available in the right quantity."
+                android:textColor="@color/muted"
+                android:textSize="13sp"
+                android:layout_marginTop="5dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp">
+                <Button
+                    android:id="@+id/addIngredientButton"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:text="+ Add ingredient"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button_olive"
+                    android:backgroundTint="@null"/>
+                <Button
+                    android:id="@+id/viewRecipesButton"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="Find recipes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button_olive"
+                    android:backgroundTint="@null"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PANTRY LIST"
+                android:textColor="@color/olive"
+                android:textSize="22sp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pantryRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:clipToPadding="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="18dp"/>
+            <TextView android:id="@+id/emptyPantry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your pantry is waiting. Add your first ingredient to get started."
+                android:textColor="@color/muted"
+                android:textSize="14sp"
+                android:padding="18dp"
+                android:background="@drawable/bg_card"
+                android:gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/view_bottom_nav"/>
+</LinearLayout>

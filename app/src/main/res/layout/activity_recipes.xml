@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/beige">
+    <include layout="@layout/view_topbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recipes, ready when you are."
+                android:textColor="@color/olive"
+                android:textSize="27sp"
+                android:fontFamily="serif"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Only recipes you can make with every ingredient currently in your pantry appear here."
+                android:textColor="@color/muted"
+                android:textSize="13sp"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:id="@+id/matchSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STRICT MATCHES"
+                android:textColor="@color/olive"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12"
+                android:layout_marginTop="12dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recipesRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="18dp"/>
+            <TextView
+                android:id="@+id/noRecipes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No recipes match your pantry yet. Add more ingredients and check back."
+                android:textColor="@color/muted"
+                android:textSize="14sp"
+                android:padding="20dp"
+                android:background="@drawable/bg_card"
+                android:gravity="center"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/view_bottom_nav"/>
+</LinearLayout>
