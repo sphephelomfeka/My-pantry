@@ -1,4 +1,5 @@
-# My Pantry
+# My-pantry
+Smart Pantry Management 
 
 A Java Android application for the Mobile App Development 700 practical assignment that helps users manage pantry ingredients. It suggests recipes only when every required ingredient is present.
 
@@ -22,4 +23,3 @@ A Java Android application for the Mobile App Development 700 practical assignme
 3. Allow Gradle sync to complete.
 4. Run the `app` configuration on an emulator or Android device (Android 9.0+).
 5. Add ingredients from Pantry. Use exact recipe ingredient names for best results (for example `tomato`, `egg`, `salt`, `pasta`, `garlic`, `potato`, `cheese`, `milk`, `banana`, `oats`).
-
